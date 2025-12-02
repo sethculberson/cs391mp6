@@ -7,7 +7,8 @@ export default async function SignInButton() {
             className="text-center m-[4vw]"
             action={async () => {
                 "use server";
-                await signIn("github", { redirectTo: "/dashboard"});
+                await signIn("github", { redirectTo: "/dashboard"})
+                    .then((c) => console.log(c));
             }}
         >
         <button className="border rounded p-4 hover:text-blue-700 hover:border-blue-700 transition duration-150" type="submit">Signin with GitHub</button>

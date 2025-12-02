@@ -1,10 +1,11 @@
 "use client";
 import getUserData from "../../lib/getUserData";
 import addUserData from "@/lib/addUserData";
-import {useState} from "react";
+import { useState } from "react";
 
-export default async function Dashboard() {
-    const userData = await getUserData();
+export default function Dashboard() {
+    const userData = null;
+
     const [name, setName] = useState<string>("");
     const [city, setCity] = useState<string>("");
 
@@ -23,8 +24,6 @@ export default async function Dashboard() {
         <h1>Dashboard</h1>
         {userData ? (
             <div>
-                <p>Name: {userData.name}</p>
-                <p>City: {userData.city}</p>
             </div>
         ) : (
             <>
