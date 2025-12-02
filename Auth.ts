@@ -7,3 +7,5 @@ export const { handlers, auth } = NextAuth({
         clientSecret: process.env.AUTH_GITHUB_SECRET || "",
     })]
 })*/
+
+export const temp : number = 6;
