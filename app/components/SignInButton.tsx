@@ -1,9 +1,7 @@
 import { signIn } from "@/auth"
  
 export default async function SignInButton() {
-    async function handleSignIn() {
-        await signIn("github", { redirectTo: "/dashboard"});
-    }
+
     return (
         <form
             className="text-center m-[4vw]"
